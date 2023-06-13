@@ -22,8 +22,8 @@ const generatePass = (length) => {
     const newArray = [...caractersLower, ...caractersUpper, ...numbers, ...symbols];
     let pass = '';
     for (let i = 0; i < length; i++) {
-        const randomI = Math.floor(Math.floor(Math.random() * newArray.length))
-        pass += newArray[randomI];
+        const randomIndex = Math.round(Math.random() * newArray.length);
+        pass += newArray[randomIndex];
     }
     input.value = pass;
 
